@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy 1st Birthday Harniwaz 🎂</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    overflow-x: hidden;
+    text-align: center;
+    color: #333;
+}
+
+/* Balloons */
+.balloon {
+    position: fixed;
+    bottom: -150px;
+    width: 60px;
+    height: 80px;
+    border-radius: 50%;
+    animation: floatUp 10s linear infinite;
+    opacity: 0.8;
+}
+
+.balloon::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background: #555;
+    top: 80px;
+    left: 50%;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-120vh); }
+}
+
+.container {
+    padding: 40px 15px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.card {
+    background: white;
+    max-width: 520px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fcb69f;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+button {
+    padding: 12px 18px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #25D366;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.music-btn {
+    background: #ff6f61;
+    margin-bottom: 15px;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Balloons -->
+<div class="balloon" style="left:5%; background:#ff6f61;"></div>
+<div class="balloon" style="left:20%; background:#ffd166; animation-duration:12s;"></div>
+<div class="balloon" style="left:40%; background:#06d6a0; animation-duration:9s;"></div>
+<div class="balloon" style="left:60%; background:#118ab2; animation-duration:11s;"></div>
+<div class="balloon" style="left:80%; background:#ef476f; animation-duration:10s;"></div>
+
+<div class="container">
+    <h1>🎉 Happy 1st Birthday 🎉</h1>
+    <h2>My Little Champion Harniwaz</h2>
+
+    <button class="music-btn" onclick="playMusic()">▶ Play Birthday Music</button>
+
+    <div class="card">
+        <!-- Replace src with your nephew's photo -->
+        <img src="/home/prit/harniwaz/30b102b5-4dcc-46af-87e5-0225b3095937.jpeg" alt="Harniwaz">
+
+        <p>
+            One year ago, you entered our lives and silently became the center of our world.
+            Your smile has more power than words.
+        </p>
+
+        <p>
+            May you grow strong, kind, fearless, and happy.
+            Your Mama will always stand beside you — no matter how big you grow.
+        </p>
+
+        <p><strong>With endless love,<br>– Mama ❤️</strong></p>
+
+        <button onclick="shareWhatsApp()">📲 Share on WhatsApp</button>
+    </div>
+
+    <footer>
+        Made with ❤️ for Harniwaz’s first birthday
+    </footer>
+</div>
+
+<audio id="bgMusic" loop>
+    <!-- Replace with your music file -->
+    <source src="/home/prit/harniwaz/WhatsApp Audio 2026-01-05 at 10.25.22 PM.mpeg" type="audio/mpeg">
+</audio>
+
+<script>
+function playMusic() {
+    document.getElementById("bgMusic").play();
+}
+
+function shareWhatsApp() {
+    const text = encodeURIComponent(
+        "🎂 Happy 1st Birthday to my dear nephew Harniwaz! 🎉\n\nMade with love by Mama ❤️"
+    );
+    const url = "https://wa.me/?text=" + text;
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
